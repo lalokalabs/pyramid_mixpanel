@@ -212,7 +212,7 @@ class MixpanelTrack:
         self,
         event: Event,
         props: t.Optional[PropertiesType] = None,
-        skip_customerio: bool = False,
+        skip_customerio: bool = True,
     ) -> None:
         """Track a Mixpanel event."""
         if event not in self.events.__dict__.values():
@@ -254,7 +254,7 @@ class MixpanelTrack:
         self,
         props: PropertiesType,
         meta: t.Optional[PropertiesType] = None,
-        skip_customerio: bool = False,
+        skip_customerio: bool = True,
     ) -> None:
         """Set properties to a Profile.
 
