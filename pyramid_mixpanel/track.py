@@ -189,7 +189,7 @@ class MixpanelTrack:
         ):
             # This is here because customerio support is an install extra,
             # i.e. it is optional
-            from customerio import CustomerIO
+            from .fake import CustomerIO
             from customerio import Regions
 
             if settings["customerio.tracking.region"] == "eu":
